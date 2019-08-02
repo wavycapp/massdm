@@ -16,6 +16,7 @@ const cmdsArray = [
 
 bot.on("ready", () => {
     clear();
+    console.log('______')
 });
 
 
@@ -27,13 +28,16 @@ bot.registry.registerGroup('dms', 'help');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
-bot.login(config.token);
+if (process.env.BOT_TOKEN) bot.login(process.env.BOT_TOKEN);
+else bot.login(config.token);
+
+
 
 
 function clear() {
     console.clear();
-    console.log(figlet.textSync("MassDM v3.2.0").green);
-    console.log("\n\nMass DM bot for Discord. Credit to Gringo(Scammer ALT)!\nSends DMs to selected members of guild.");
-    console.log(`\nForked and improved by Alex.\n Random send time set @ 0.01-${config.wait}s`);
-    console.log(`Type ${config.prefix}help in a chat.\n\n`);
+    console.log(figlet.textSync("MassDM v3.3.0").green);
+    console.log("\n\nMass DM bot for Discord. \n Sends DMs to selected members of guild.\n  Forked and improved by Alex.");
+    console.log(`\nRandom send time set @ 0.01-${config.wait}s`);
+    console.log(` Type  ${config.prefix}help  in a chat.\n\n`);
 }
