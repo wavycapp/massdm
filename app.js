@@ -37,7 +37,7 @@ else bot.login(config.token);
 
 function clear() {
     console.clear();
-    console.log(figlet.textSync("MassDM v3.3.1").green);
+    console.log(figlet.textSync("MassDM v3.3.3").green);
     console.log("\n\nMass DM bot for Discord. \n Sends DMs to selected members of guild.\n  Forked and improved by Alex.");
     console.log("\n     Feel free to contact me on discord if you have any questions (alex-#0001)");
     console.log(`\nRandom send time set @ 0.01-${config.wait}s`);

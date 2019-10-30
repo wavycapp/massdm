@@ -42,18 +42,33 @@ class DMroleCommand extends commando.Command {
 
         let memberarray = role.members.array();
         let membercount = memberarray.length;
+        let botcount = 0;
+        let successcount = 0;
         console.log(`Responding to ${message.author.username} :  Sending message to all ${membercount} members of role ${role.name}.`)
         for (var i = 0; i < membercount; i++) {
-            let timeout = Math.floor((Math.random() * (config.wait - 0.01)) * 1000) + 10;
             let member = memberarray[i];
+            if (member.user.bot) {
+                console.log(`Skipping bot with name ${member.user.username}`)
+                botcount++;
+                continue
+            }
+            let timeout = Math.floor((Math.random() * (config.wait - 0.01)) * 1000) + 10;
+            
             await sleep(timeout);
             if(i == (membercount-1)) {
                 console.log(`Waited ${timeout}ms.\t\\/\tDMing ${member.user.username}`);
             } else {
                 console.log(`Waited ${timeout}ms.\t|${i + 1}|\tDMing ${member.user.username}`);
             }
-            member.send(`${msg} \n\n [${timeout}]`);
+            try {
+                member.send(`${msg} \n #${timeout}`);
+                successcount++;
+            } catch (error) {
+                console.log(`--Failed to send DM! ` + error)
+            }
         }
+        console.log(`Sent ${successcount} ${(successcount != 1 ? `messages` : `message`)} successfully, ` +
+            `${botcount} ${(botcount != 1 ? `bots were` : `bot was`)} skipped.`);
     }
 }
 
