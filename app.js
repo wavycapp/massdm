@@ -18,6 +18,7 @@ const cmdsArray = [
 bot.on("ready", () => {
     clear();
     console.log('______')
+    bot.user.setActivity('from GitHub');
 });
 
 

@@ -10,7 +10,7 @@ class DMallCommand extends commando.Command {
             group: 'dms',
             memberName: 'dmall',
             description: 'Sends message provided to all members of the guild.',
-            examples: [ 'Hey everyone! This might reach more people than an announcement...' ]
+            examples: [ `${config.prefix}dmall Hey everyone! This might reach more people than a mass ping...` ]
         });
     }
 

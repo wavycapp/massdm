@@ -10,7 +10,7 @@ class DMroleCommand extends commando.Command {
             group: 'dms',
             memberName: 'dmrole',
             description: 'Sends message provided to all members of the specified role.',
-            examples: [ 'Hey everyone! This might reach more people than an announcement...' ]
+            examples: [ `${config.prefix}dmall @Administrators Hey fellas! This might reach more people than a mass ping...` ]
         });
     }
 
