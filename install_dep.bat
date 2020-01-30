@@ -20,7 +20,6 @@ exit /B
 pushd "%CD%"
 CD /D "%~dp0"
 cls
-goto :nodeinstall
 WHERE npm install >nul
 IF %ERRORLEVEL% NEQ 0 goto :nodeinstall
 
