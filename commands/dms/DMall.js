@@ -18,6 +18,13 @@ class DMallCommand extends commando.Command {
         let dmGuild = message.guild;
         let role = message.mentions.roles.first();
         var msg = message.content;
+        const adminPermissions = new Permissions('ADMINISTRATOR');
+
+        let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
+        if (!botusr.hasPermission(adminPermissions)) {
+            console.log(`WARNING: Bot is not properly configured with administrative permissions.`);
+        }
+
 
 
         try {

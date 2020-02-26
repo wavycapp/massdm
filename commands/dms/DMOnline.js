@@ -17,33 +17,72 @@ class DMallCommand extends commando.Command {
     async run(message){
         let dmGuild = message.guild;
         let role = message.mentions.roles.first();
-        let msg;
-        let OnlineMembers;
+        let msg = "";
+        let OnlineMembers = [];
         let interest;
+        const adminPermissions = new Permissions('ADMINISTRATOR');
+
+        let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
+        if (!botusr.hasPermission(adminPermissions)) {
+            console.log(`WARNING: Bot is not properly configured with administrative permissions.`);
+        }
+
+
 
         // First we use fetchMembers to make sure all members are cached
-        message.guild.fetchMembers().then(fetchedGuild => {
-            OnlineMembers = fetchedGuild.members.filter(member => member.presence.status === 'online');
-        });
 
+        let memberarray = dmGuild.members.array();
+        let membercount = memberarray.length;
+        let botcount = 0;
+        for (var i = 0; i < membercount; i++) {
+            let member = memberarray[i];
+            if (member.user.bot) {
+                botcount++;
+                continue
+            }
+            if (member.presence.status == 'online') {
+                OnlineMembers.push(member);
+            }
+        }
+
+        message.reply('you now have *ten minutes* to send the message that you would like to massDM here.')
+        // Await !vote messages
+        const filter = m =>  message.author.id === m.author.id;
+        // Errors: ['time'] treats ending because of the time limit as an error
+        message.channel.awaitMessages(filter, { max: 1, time: 60000, errors: ['time'] })
+            .then(collected => msg = collected.content)
+            .catch(message.reply('you did not enter any input!'));
+        
+        
         message.reply('you now have *ten minutes* to send the message that you would like to massDM here.').then(() => {
             const filter = m => message.author.id === m.author.id;
         
-            message.channel.awaitMessages(filter, { time: 6000, maxMatches: 1, errors: ['time'] })
+            message.channel.awaitMessages(filter, { time: 600000, max: 1, errors: ['time'] })
                 .then(messages => {
-                    msg = messages.first().content;
+                    msg = messages.content;
                 })
                 .catch(() => {
                     message.reply('you did not enter any input!');
                 });
         });
-
+        message.author.send(`You are selecting *${OnlineMembers.length}* members, and excluding *${botcount}* bots.`);
+        const collector = new Discord.MessageCollector(message.channel, m => m.author.id === message.author.id, { time: 60000, max: 1, maxMatches: 1 });
+        collector.on('collect', message2 => {
+            msg = message2.content;
+        })
+        let wait = 0
+        while (msg = "") {
+            wait++;
+            setTimeout(function(){
+                continue
+            }, 2000);
+        }
         
 
         message.reply(`type *"Y"* to begin sending the following message to **${OnlineMembers.length} members**, and *"N"* to forget it.\n\n${msg} \n #random`).then(() => {
             const filter = m => message.author.id === m.author.id;
         
-            message.channel.awaitMessages(filter, { time: 6000, maxMatches: 1, errors: ['time'] })
+            message.channel.awaitMessages(filter, { time: 600000, maxMatches: 1, errors: ['time'] })
                 .then(messages => {
                     interest = messages.first().content;
                 })
@@ -60,7 +99,7 @@ class DMallCommand extends commando.Command {
                 return;
             }
     
-            let memberarray = dmGuild.members.array();
+            let memberarray = OnlineMembers;
             let membercount = memberarray.length;
             let botcount = 0;
             let successcount = 0;
