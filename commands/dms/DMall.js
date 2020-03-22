@@ -2,6 +2,8 @@ const commando = require('discord.js-commando');
 const app = require('../../app.js');
 const config = require('../../config.json');
 const Discord = require('discord.js');
+const util = require('util');
+const { Client, Permissions } = require('discord.js');
 
 class DMallCommand extends commando.Command {
     constructor(client){
@@ -10,20 +12,26 @@ class DMallCommand extends commando.Command {
             group: 'dms',
             memberName: 'dmall',
             description: 'Sends message provided to all members of the guild.',
-            examples: [ `${config.prefix}dmall Hey everyone! This might reach more people than a mass ping...` ]
+            examples: [ `${config.prefix}dmall Hey everyone! This might reach more people than a mass ping...` ],
+            clientPermissions: ['ADMINISTRATOR'],
+            userPermissions: ['ADMINISTRATOR']
         });
     }
+
+    /*
+    hasPermission(message, client) {
+        if (!message.channel.permissionsFor(client.user).has('ADMINISTRATOR')) {
+            console.log(`WARNING: Bot is not properly configured with administrative permissions.`);
+            return 'test';
+        }
+        return 'testss';
+    }
+     */  
 
     async run(message, args){
         let dmGuild = message.guild;
         let role = message.mentions.roles.first();
         var msg = message.content;
-        const adminPermissions = new Permissions('ADMINISTRATOR');
-
-        let botusr = dmGuild.members.find(o => o.id == this.client.user.id)
-        if (!botusr.hasPermission(adminPermissions)) {
-            console.log(`WARNING: Bot is not properly configured with administrative permissions.`);
-        }
 
 
 
