@@ -52,3 +52,15 @@ function clear() {
     console.log(`\nRandom send time set @ 0.01-${config.wait}s`);
     console.log(` Type  ${config.prefix}help  in a chat.\n\n`);
 }
+
+
+/*
+The only values that are not truthy in JavaScript are the following (a.k.a. falsy values):
+
+null
+undefined
+0
+"" (the empty string)
+false
+NaN
+*/
