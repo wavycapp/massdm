@@ -3,8 +3,11 @@
 [![HitCount](http://hits.dwyl.com/alexlyee/massdm.svg)](http://hits.dwyl.com/alexlyee/massdm) 
 [![Inline docs](http://inch-ci.org/github/alexlyee/massdm.svg?branch=master)](http://inch-ci.org/github/alexlyee/massdm) 
 [![Known Vulnerabilities](https://snyk.io/test/github/alexlyee/massdm/badge.svg?targetFile=package.json)](https://snyk.io/test/github/alexlyee/massdm?targetFile=package.json) 
-[![Build Status](https://travis-ci.org/{alexlyee}/{massdm}.png?branch=master)](https://travis-ci.org/{alexlyee}/{massdm})
+[![Build Status](https://travis-ci.org/alexlyee/massdm.png?branch=master)](https://travis-ci.org/alexlyee/massdm)
+[![Number of Dependencies](https://david-dm.org/alexlyee/massdm.svg)](https://david-dm.org/alexlyee/massdm)
+[![Discord](https://img.shields.io/discord/363082439985201155)](https://discord.gg/tCVG2yU)
 
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/alexlyee/massdm/issues)
 
 > MassDM v3, a bot to send DMs to every member of a role in Discord server.
 > Can send DMs to @everyone, and to just those who are online.
