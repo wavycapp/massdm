@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const Discord = require('discord.js');
 const figlet = require('figlet');
 const colors = require('colors');
@@ -17,7 +19,7 @@ const cmdsArray = [
 
 bot.on("ready", () => {
     clear();
-    console.log('______')
+    console.log('______');
     bot.user.setActivity('from GitHub', { url: "https://github.com/alexlyee/massdm", type: 'PLAYING' })
         .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
         .catch(console.error);

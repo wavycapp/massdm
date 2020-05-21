@@ -1,2 +1,3 @@
-config.json
-config.json
+# don't watch my token
+/config.json
+

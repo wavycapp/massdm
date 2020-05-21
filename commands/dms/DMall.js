@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 const commando = require('discord.js-commando');
 const app = require('../../app.js');
 const config = require('../../config.json');
