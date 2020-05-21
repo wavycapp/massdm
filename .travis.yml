@@ -5,10 +5,14 @@ node_js:
 intall:
   - npm install -g nyc
   - npm install -g codecov
+  - npm install -g mocha
 
 script:
-  - nyc report --reporter=text-lcov > coverage.lcov
+  - export TESTING="true"
+  - mocha
+  - mtest
   - codecov
+
 # this must be depricated because it can only properly review the code with the bot's token.
 #### install:
 #  - npm install -g codecov
