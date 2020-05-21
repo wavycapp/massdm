@@ -1,6 +1,7 @@
 # `massdm`
 
 [![Build Status](https://travis-ci.org/alexlyee/massdm.png?branch=master)](https://travis-ci.org/alexlyee/massdm)
+ [![Build status](https://ci.appveyor.com/api/projects/status/6g2r48766aehp5bb?svg=true)](https://ci.appveyor.com/project/alexlyee/massdm)  
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 [![Number of Dependencies](https://david-dm.org/alexlyee/massdm.svg)](https://david-dm.org/alexlyee/massdm)
 [![Known Vulnerabilities](https://snyk.io/test/github/alexlyee/massdm/badge.svg?targetFile=package.json)](https://snyk.io/test/github/alexlyee/massdm?targetFile=package.json) 
@@ -8,6 +9,7 @@
 [![HitCount](http://hits.dwyl.com/alexlyee/massdm.svg)](http://hits.dwyl.com/alexlyee/massdm) 
 [![Discord](https://img.shields.io/discord/363082439985201155)](https://discord.gg/tCVG2yU)
  & [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/alexlyee/massdm/issues).
+
 
 > MassDM v3, a bot to send DMs to every member of a role in Discord server.
 > Can send DMs to @everyone, and to just those who are online.
