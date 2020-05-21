@@ -78,8 +78,10 @@ NaN
 
 /*
 https://stackoverflow.com/questions/14274293/show-current-state-of-jenkins-build-on-github-repo
-https://docs.travis-ci.com/user/tutorial/
+https://docs.travis-ci.com/user/tutorial/   https://travis-ci.org/github/alexlyee/massdm/jobs/689535155
 https://app.snyk.io/org/alexlyee
 https://inch-ci.org/github/alexlyee/massdm?branch=master
 https://hits.dwyl.com/
+https://david-dm.org/?success
+
 */
