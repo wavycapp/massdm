@@ -7,7 +7,6 @@ intall:
   - npm install -g codecov
 
 script:
-  - nyc npm test
   - nyc report --reporter=text-lcov > coverage.lcov
   - codecov
 # this must be depricated because it can only properly review the code with the bot's token.
