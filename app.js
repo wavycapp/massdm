@@ -39,6 +39,8 @@ bot.registry.registerGroup('dms', 'help');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
+if (process.env.TESTING) process.exit();
+
 try {
     if (process.env.BOT_TOKEN) bot.login(process.env.BOT_TOKEN);
     else bot.login(config.token);

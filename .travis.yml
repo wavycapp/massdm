@@ -9,9 +9,7 @@ intall:
 
 script:
   - export TESTING="true"
-  - mocha
-  - mtest
-  - codecov
+  - npx nyc --reporter=lcov npm mtest && npx codecov
 
 # this must be depricated because it can only properly review the code with the bot's token.
 #### install:
