@@ -1,3 +1,5 @@
 # don't watch my token
 /config.json
 
+# temp
+coverage/
