@@ -1,12 +1,6 @@
 language: node_js
 node_js:
   - "node"
-<<<<<<< HEAD
-||||||| merged common ancestors
-<<<<<<< HEAD
-=======
-
->>>>>>> 86db5507eab3cef8b8f33d70ada8c49600eebe58
 
 # this must be depricated because it can only properly review the code with the bot's token.
 #### install:
@@ -15,24 +9,3 @@ node_js:
 #script:
 #  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
 #  - codecov
-<<<<<<< HEAD
-
-||||||| merged common ancestors
-||||||| merged common ancestors
-install:
-  - npm install -g codecov
-  - npm install -g istanbul
-script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
-=======
-install:
-  - npm install -g codecov
-  - npm install -g nyc
-script:
-  - nyc cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
->>>>>>> 036b82355e5a23b37be52dabd5aefcc0086ed53d
-
-=======
->>>>>>> 86db5507eab3cef8b8f33d70ada8c49600eebe58
