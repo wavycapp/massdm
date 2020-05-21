@@ -1,10 +1,12 @@
 language: node_js
 node_js:
   - "node"
-install:
-  - npm install -g codecov
-  - npm install -g istanbul
-script:
-  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
-  - codecov
+
+# this must be depricated because it can only properly review the code with the bot's token.
+#### install:
+#  - npm install -g codecov
+#  - npm install -g istanbul
+#script:
+#  - istanbul cover ./node_modules/mocha/bin/_mocha --reporter lcovonly -- -R spec
+#  - codecov
 
