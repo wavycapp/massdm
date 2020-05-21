@@ -39,9 +39,14 @@ bot.registry.registerGroup('dms', 'help');
 bot.registry.registerDefaults();
 bot.registry.registerCommandsIn(__dirname + "/commands");
 
-if (process.env.BOT_TOKEN) bot.login(process.env.BOT_TOKEN);
-else bot.login(config.token);
-
+try {
+    if (process.env.BOT_TOKEN) bot.login(process.env.BOT_TOKEN);
+    else bot.login(config.token);
+}
+catch (e) {
+    console.log(e);
+    console.log("Failed to login to Discord!");
+}
 
 
 

@@ -4,6 +4,7 @@
   "description": "A bot to send DMs to every user in a Discord server.",
   "main": "app.js",
   "scripts": {
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
     "test": "jshint app.js"
   },
   "author": "Alex (alexlyee)",
