@@ -2,6 +2,14 @@ language: node_js
 node_js:
   - "node"
 
+intall:
+  - npm install -g nyc
+  - npm install -g codecov
+
+script:
+  - nyc npm test
+  - nyc report --reporter=text-lcov > coverage.lcov
+  - ./node_modules/.bin/codecov
 # this must be depricated because it can only properly review the code with the bot's token.
 #### install:
 #  - npm install -g codecov
