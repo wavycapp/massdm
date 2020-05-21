@@ -2,10 +2,10 @@ language: node_js
 node_js:
   - "node"
 
+# reporting to codecov. ends early because it can't login, so not particularly useful in this case.
 intall:
   - npm install -g nyc
   - npm install -g codecov
-  - npm install -g mocha
 
 script:
   - export TESTING="true"
