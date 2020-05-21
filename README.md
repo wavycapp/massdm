@@ -1,16 +1,21 @@
 # `massdm`
 
-[![Build Status](https://travis-ci.org/alexlyee/massdm.png?branch=master)](https://travis-ci.org/alexlyee/massdm)
+[![Build Status](https://travis-ci.org/alexlyee/massdm.svg?branch=master)](https://travis-ci.org/alexlyee/massdm)
+ [![Build status](https://ci.appveyor.com/api/projects/status/6g2r48766aehp5bb?svg=true)](https://ci.appveyor.com/project/alexlyee/massdm) 
 [![JavaScript Style Guide: Good Parts](https://img.shields.io/badge/code%20style-goodparts-brightgreen.svg?style=flat)](https://github.com/dwyl/goodparts "JavaScript The Good Parts")
 [![Number of Dependencies](https://david-dm.org/alexlyee/massdm.svg)](https://david-dm.org/alexlyee/massdm)
 [![Known Vulnerabilities](https://snyk.io/test/github/alexlyee/massdm/badge.svg?targetFile=package.json)](https://snyk.io/test/github/alexlyee/massdm?targetFile=package.json) 
-[![Inline docs](http://inch-ci.org/github/alexlyee/massdm.svg?branch=master)](http://inch-ci.org/github/alexlyee/massdm) 
-[![HitCount](http://hits.dwyl.com/alexlyee/massdm.svg)](http://hits.dwyl.com/alexlyee/massdm) 
-[![Discord](https://img.shields.io/discord/363082439985201155)](https://discord.gg/tCVG2yU)
- & [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/alexlyee/massdm/issues).
+[![Inline docs](http://inch-ci.org/github/alexlyee/massdm.svg?branch=master)](http://inch-ci.org/github/alexlyee/massdm)  
 
-> MassDM v3, a bot to send DMs to every member of a role in Discord server.
-> Can send DMs to @everyone, and to just those who are online.
+<h3 align="center">
+   <a href="https://fmbot.xyz/">a bot to send DMs to every member of a role in Discord server</a>
+</h3>
+<p align="center">
+  <a href="http://hits.dwyl.com/alexlyee/massdms"><img src="http://hits.dwyl.com/alexlyee/massdm.svg" alt="HitCount"></a>
+   <a href="https://discord.gg/tCVG2yU"><img src="https://img.shields.io/discord/363082439985201155" alt="Discord"></a>
+  <a href="https://github.com/alexlyee/massdm/issues"><img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions Welcome! :)"></a>
+</p>
+<hr />
 
 
 ***Use this tool at your own risk!*** 
