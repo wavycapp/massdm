@@ -1,0 +1,16 @@
+version: '3.0.4'
+
+test_script:
+ - cmd: npm test
+
+build:
+ verbosity: minimal
+ 
+platform:
+  - Any CPU
+
+configuration:
+  - Release
+
+matrix:
+  fast_finish: true
