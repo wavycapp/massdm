@@ -19,7 +19,7 @@ const cmdsArray = [
 
 bot.on("ready", () => {
     clear();
-    console.log('______')
+    console.log('______');
     bot.user.setActivity('from GitHub', { url: "https://github.com/alexlyee/massdm", type: 'PLAYING' })
         .then(presence => console.log(`Activity set to ${presence.game ? presence.game.name : 'none'}`))
         .catch(console.error);
@@ -55,6 +55,7 @@ function clear() {
     console.log(` Type  ${config.prefix}help  in a chat.\n\n`);
 }
 
+/************      NOTES */
 
 /*
 The only values that are not truthy in JavaScript are the following (a.k.a. falsy values):
@@ -66,5 +67,19 @@ undefined
 false
 NaN
 
+*/
+
+/* 
+.jshintrc
+{
+  "esversion": 6
+}
+*/
+
+/*
 https://stackoverflow.com/questions/14274293/show-current-state-of-jenkins-build-on-github-repo
+https://docs.travis-ci.com/user/tutorial/
+https://app.snyk.io/org/alexlyee
+https://inch-ci.org/github/alexlyee/massdm?branch=master
+https://hits.dwyl.com/
 */
