@@ -54,7 +54,7 @@ catch (e) {
 
 function clear() {
     console.clear();
-    console.log(figlet.textSync("MassDM v3.4.0f").green); // final, fixed [but not really], etc..?
+    console.log(figlet.textSync("MassDM v3.4.0b").green); // just in case it wasn't obvious, this is a beta
     console.log("\n\nMass DM bot for Discord. \n Sends DMs to selected members of guild.\n  Forked and improved by Alex.");
     console.log("\n     Don't forget to apply the proper permissions in Discord. Use https://github.com/alexlyee/massdm/issues to report issues. Suport server: https://discord.gg/mMWQaDx");
     console.log("\n     After someone by the name of \"6669\" double-crossed me, \n(assuring me that I would be paid for working on the project, but once I did most of the work and proved it was fixed, blocked me) \n    I will be abandoning this project, please do not contact me to report bugs. I am aware that there are some. ");
@@ -90,5 +90,10 @@ https://app.snyk.io/org/alexlyee
 https://inch-ci.org/github/alexlyee/massdm?branch=master
 https://hits.dwyl.com/
 https://david-dm.org/?success
+https://github.com/dwyl/goodparts#why
 
+https://shields.io/
+https://github.com/badges/shields/blob/master/README.md
+
+https://github.com/dwyl/learn-tdd
 */
