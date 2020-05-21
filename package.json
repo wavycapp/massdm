@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "test": "jshint app.js",
-    "mtest": "mocha"
+    "jshtest": "jshint app.js",
+    "test": "mocha app.js"
   },
   "author": "Alex (alexlyee)",
   "license": "Apache License 2.0",
