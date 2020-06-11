@@ -31,7 +31,7 @@ You will need one thing installed to make this bot work. If you're on Windows, s
 - Node.JS(LTS version). https://nodejs.org/en/
 
 
-**Open `config.json` in your code editor and edit the token with your bot token or your user token.** [or remove the "REM" and replate "YOUR TOKEN" in start.bat]
+**Open `config.json` in your code editor and edit the token with your bot token.** [or remove the "REM" and replate "YOUR TOKEN" in start.bat]
  - Additionally, you can change the prefix, modify the ID of the user who will control the bot, and the [randomized] delay between each send. If you increase this delay, you will be more safe, decrease it at your own risk.
 Once you have that done, save the file.
 **Of course, you must properly configure the permissions of the bot. Give it administrative-level permissions in your server.**
