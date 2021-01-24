@@ -12,7 +12,7 @@
 ![Version](https://img.shields.io/github/package-json/v/alexlyee/massdm.svg)
 
 <h3 align="center">
-   <a href="https://fmbot.xyz/">a bot to send DMs to every member of a role in Discord server</a>
+   <a href="https://github.com/alexlyee/massdm">a bot to send DMs to every member of a role in Discord server</a>
 </h3>
 <p align="center">
   <a href="http://hits.dwyl.com/alexlyee/massdms"><img src="http://hits.dwyl.com/alexlyee/massdm.svg" alt="HitCount"></a>
